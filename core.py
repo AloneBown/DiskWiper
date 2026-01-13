@@ -26,11 +26,14 @@ class DiskCore:
         self.disks = []
 
     def get_disk_list(self, show_usb=True):
-        # Fetch physical disks via PowerShell with extended data in JSON format
+        # We add -Unique to the FileSystem search to avoid repeating the same FS types 
+        # from multiple service partitions (like EFI, Recovery, etc.)
         ps_cmd = (
             "Get-Disk | "
-            "Select-Object Number, FriendlyName, BusType, Size, AllocatedSize, "
-            "OperationalStatus, HealthStatus, @{Name='PartitionCount';Expression={(Get-Partition -DiskNumber $_.Number | Measure-Object).Count}} | "
+            "Select-Object Number, FriendlyName, BusType, Size, AllocatedSize, SerialNumber, "
+            "HealthStatus, OperationalStatus, "
+            "@{Name='PartitionCount';Expression={(Get-Partition -DiskNumber $_.Number | Measure-Object).Count}}, "
+            "@{Name='FileSystem';Expression={$fs = (Get-Partition -DiskNumber $_.Number | Get-Volume -ErrorAction SilentlyContinue).FileSystemType | Select-Object -Unique; if ($fs) { $fs -join ', ' } else { 'RAW' }}} | "
             "ConvertTo-Json -Compress"
         )
         
@@ -41,40 +44,40 @@ class DiskCore:
             ).strip()
 
             if not output: return []
-            
             data = json.loads(output)
-            raw_list = data if isinstance(data, list) else [data]
+            raw = data if isinstance(data, list) else [data]
             
-            processed_disks = []
-            for d in raw_list:
+            processed = []
+            for d in raw:
                 d_id = str(d['Number'])
                 # Skip system drive and filter USB if needed
                 if d_id == '0' or (not show_usb and d['BusType'] == 'USB'):
                     continue
-                processed_disks.append(d)
+                processed.append(d)
             
-            processed_disks.sort(key=lambda x: int(x['Number']))
-            
-            self.disks = processed_disks
+            processed.sort(key=lambda x: int(x['Number']))
+            self.disks = processed
             return self.disks
         except Exception as e:
             return f"Error: {str(e)}"
 
-    def wipe_disk(self, disk_id, callback_log):
-        callback_log(f"[*] Initializing Disk {disk_id} wipe...", "info")
-        script = (
-            f"select disk {disk_id}\n"
-            "clean\n"
-            "create partition primary\n"
-            "format fs=ntfs quick\n"
-            "assign\n"
+    def wipe_disk(self, disk_id, fs_type, callback_log):
+        # Supported fs_type: ntfs, fat32, exfat
+        callback_log(f"[*] Starting wipe for Disk {disk_id} (FS: {fs_type.upper()})...", "info")
+        
+        commands = [
+            f"select disk {disk_id}",
+            "clean",
+            "create partition primary",
+            f"format fs={fs_type.lower()} quick",
+            "assign",
             "exit"
-        )
+        ]
         
         tmp_path = None
         try:
             with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:
-                f.write(script)
+                f.write("\n".join(commands))
                 tmp_path = f.name
             
             res = subprocess.run(
@@ -84,10 +87,10 @@ class DiskCore:
             )
             
             if res.returncode == 0:
-                callback_log(f"[OK] Disk {disk_id} wiped and formatted.", "success")
+                callback_log(f"[OK] Disk {disk_id} wiped and formatted as {fs_type.upper()}.", "success")
                 return True
             
-            err = res.stderr.strip() or "Diskpart internal error"
+            err = res.stderr.strip() or "Diskpart error"
             callback_log(f"[FAIL] Disk {disk_id}: {err[:60]}", "error")
             return False
         finally:
