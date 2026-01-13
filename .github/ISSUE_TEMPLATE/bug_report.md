@@ -1,33 +1,32 @@
 ---
-name: 🐞 Bug report
-about: Report a bug or unexpected behavior in DiskWiper
+name: Bug report
+about: Create a report to help us improve
 title: "[BUG] "
-labels: bug
+labels: Bug
 assignees: ''
+
 ---
 
-## 🐞 Description
-Provide a clear and concise description of the bug.
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-## 🔁 Steps to Reproduce
-1. Launch DiskWiper
-2. Select ...
-3. Click ...
-4. Observe the issue
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## ✅ Expected Behavior
-Describe what you expected to happen.
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-## ❌ Actual Behavior
-Describe what actually happened.
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-## 🖥️ Environment
-- DiskWiper version:
-- Operating System (Windows 10 / 11, build):
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Version [e.g. 22]
+ - Add a screenshot of debug info in settings tab
 
-## 📎 Additional Information
-- Screenshots
-- Logs
-- Error messages
-
-Any additional context that may help reproduce or fix the issue.
+**Additional context**
+Add any other context about the problem here.
