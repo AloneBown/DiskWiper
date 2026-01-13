@@ -21,7 +21,7 @@ import threading, os, json, sys, time, platform
 from core import DiskCore
 
 # Global constants for the application
-VERSION = "1.1.2"
+VERSION = "1.0.1"
 APP_NAME = "DiskWiper"
 CONFIG_NAME = "config.json"
 
@@ -29,10 +29,6 @@ ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
 class SettingsFrame(ctk.CTkFrame):
-    """
-    Internal overlay frame for application settings.
-    Provides a seamless 'window-in-window' experience.
-    """
     def __init__(self, parent):
         super().__init__(parent, corner_radius=15, border_width=2, border_color="#333")
         self.parent = parent
@@ -41,7 +37,7 @@ class SettingsFrame(ctk.CTkFrame):
 
     def _init_ui(self):
         # Header for settings panel
-        ctk.CTkLabel(self, text="Application Settings", font=("Roboto", 22, "bold")).pack(pady=(20, 15))
+        ctk.CTkLabel(self, text="Settings", font=("Roboto", 22, "bold")).pack(pady=(20, 15))
 
         # Settings switches linked to application state
         self.usb_switch = ctk.CTkSwitch(self, text="Show USB Devices", command=self.update_parent_cfg)
@@ -108,7 +104,7 @@ class DiskWiperGUI(ctk.CTk):
         self.is_wiping = False
         self.disk_count_cache = 0
         self.settings = {'usb': True, 'details': False}
-        
+
         self.app_dir = os.path.join(os.environ.get('APPDATA', os.path.expanduser('~')), APP_NAME)
         self.config_file = os.path.join(self.app_dir, CONFIG_NAME)
         
@@ -148,7 +144,7 @@ class DiskWiperGUI(ctk.CTk):
         self.refresh_btn = ctk.CTkButton(controls, text="Refresh", width=140, height=38, command=self.refresh)
         self.refresh_btn.grid(row=0, column=1, padx=5)
         
-        self.wipe_btn = ctk.CTkButton(controls, text="WIPE SELECTED", width=180, height=38, 
+        self.wipe_btn = ctk.CTkButton(controls, text="WIPE", width=180, height=38, 
                                      fg_color="#a10000", hover_color="#7d0000", font=("Roboto", 13, "bold"),
                                      command=self.confirm_action)
         self.wipe_btn.grid(row=0, column=2, padx=5)
