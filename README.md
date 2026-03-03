@@ -1,103 +1,153 @@
-# 🧹 DiskWiper v1.0  
----
+# DiskWiper
 
-## 🎯 Purpose
-
-**DiskWiper** provides a safe and intuitive graphical interface for the Windows `diskpart` utility, allowing users to quickly **wipe, partition, and format drives** without using the command line.
+A robust, graphical interface for Windows disk management, diagnostics, and secure wiping.
 
 ---
 
-## ✨ Key Features
+## Overview
 
-### 🔍 Automatic Disk Detection
-Real-time monitoring of connected hardware.  
-The disk list updates automatically when you plug in or remove a drive.
-You can also use **Refresh** button for manual update.
-
-### 🛡️ Safe Selection
-By default, the system drive (**Disk 0**) is hidden to prevent accidental data loss on your OS partition.
-
-### 📊 Extended Drive Metadata
-Toggle **Extended Info** to view:
-- Number of volumes  
-- Operational status  
-- Allocated space  
-
-### ⚡ One-Click Wipe Process
-Performs a fully automated cleaning sequence:
-1. Cleans the disk signature  
-2. Creates a new primary partition  
-3. Performs a quick **NTFS** format  
-4. Assigns a drive letter  
-
-### 💾 Persistent Configuration
-Remembers your view preferences (**Show USB**, **Extended Info**) across sessions.
+DiskWiper provides a secure and intuitive Graphical User Interface (GUI) for the native Windows `diskpart` utility. It allows system administrators, technicians, and power users to efficiently wipe, partition, and format storage drives without relying on the command-line interface.
 
 ---
 
-## 📖 How to Use
+## Key Features
 
-Follow these steps to safely clean your storage devices:
+### Dynamic Hardware Detection
 
-1. **Identify Your Disk**  
-   Locate the target drive in the list.  
-   Double-check the **size** and **friendly name**.
+- Real-time monitoring of connected storage devices
+- Automatic refresh on drive insertion or removal
 
-2. **Select**  
-   - Click the checkbox next to the disk(s) you wish to wipe  
-   - Or use the master checkbox for bulk selection
+### S.M.A.R.T. Diagnostics & Grading
 
-3. **Confirm**  
-   Click the **WIPE** button and confirm the destructive action.
+Integrated low-level health monitoring, including:
 
-4. **Done**  
-   Once the log shows:  --- OPERATIONS FINISHED ---, your drive is ready to use.
+- Power-On Hours
+- Reallocated Sectors
+- Wear Leveling
+- Total Bytes Written (TBW)
+
+Assigns an overall drive health grade from A+ to D.
+
+### Automated Wipe Sequence
+
+Executes a fully unattended cleaning process with a single click:
+
+1. Cleans the existing disk signature and partition table
+2. Creates a new primary partition
+3. Performs a quick format (NTFS, FAT32, or exFAT)
+4. Automatically assigns an available drive letter
+
+### Failsafe Mechanisms
+
+- The primary system drive (Disk 0) is restricted by default
+- Prevents accidental destruction of the operating system partition
+
+### Inventory Reporting
+
+- Generates scannable QR codes
+- Includes Serial Number, Model, and health metrics
+- Designed for streamlined inventory management
+
+### Persistent Configuration
+
+- Automatically saves and restores UI preferences
+- USB visibility mode
+- Extended metadata mode
 
 ---
-## 🛠 Building from Source
 
-To build **DiskWiper** as a portable executable, make sure **Python 3** is installed on your system, then follow these steps:
+## Usage Guide
 
----
+### 1. Identify the Target Drive
 
-### 📦 Install Dependencies
+Locate the designated drive in the inventory list and carefully verify:
 
-Install the required Python packages:
+- Capacity
+- Filesystem
+- Friendly Name
+- Serial Number
 
-```bash
-pip install customtkinter
-pip install pyinstaller
+### 2. Select the Drive
+
+- Use the corresponding checkbox
+- Bulk selection is supported for multi-drive operations
+
+### 3. Execute
+
+- Click the WIPE button
+- Review the security prompt
+- Explicitly confirm the destructive action
+
+### 4. Completion
+
+Monitor the execution log. Once the following message appears:
+
+```
+[OK] Disk wipe completed successfully
 ```
 
-### 🏗 Build the Project
+The drive is provisioned and ready for use.
 
-Use the following command to generate a portable folder build with an embedded administrator (UAC) manifest:
+---
+
+## Building from Source
+
+### Prerequisites
+
+- Python 3.x installed
+- Python added to system PATH
+
+### Dependencies
+
+Install required packages:
+
+```bash
+pip install customtkinter pyinstaller pillow qrcode
+```
+
+### Compilation
+
+Generate a portable folder build with embedded UAC administrator manifest:
+
 ```bash
 pyinstaller --noconfirm --onedir --windowed --uac-admin --collect-all "customtkinter" --name "DiskWiper" main.py
 ```
-## 🛠 Technical Details
 
-| Component     | Technology                                   |
-|---------------|----------------------------------------------|
-| Engine        | Python 3 + Windows PowerShell + Diskpart     |
-| Interface     | Modern Dark UI via CustomTkinter             |
-| Architecture | Multi-threaded (Monitoring & Processing)     |
-| Privileges   | Requires Elevated Administrator Rights       |
+If you prefer a single executable file:
 
----
+```bash
+pyinstaller --noconfirm --onefile --windowed --uac-admin --collect-all "customtkinter" --name "DiskWiper" main.py
+```
 
-## 📜 License
-
-This project is licensed under the **GNU GPL v3**.  
-See `LICENSE` for details.
+Note: Using `--onefile` may increase startup time slightly.
 
 ---
 
-## ⚠️ Warning
+## Technical Specifications
 
-### ❗ EXTREME CAUTION REQUIRED
+| Component    | Technology / Detail |
+|-------------|---------------------|
+| Core Engine | Python 3, Windows PowerShell, native `diskpart` |
+| Interface   | CustomTkinter (Modern Dark UI) |
+| Architecture| Asynchronous multi-threading (non-blocking UI and monitoring) |
+| Permissions | Requires elevated Administrator privileges (UAC) |
 
-This software performs **destructive operations**.  
-Wiping a disk will result in the **permanent loss of all data** on that device.
+---
 
-**Always double-check your selection before clicking _WIPE_.**
+## Security Warning
+
+CRITICAL:
+
+This software performs irreversible, destructive operations.
+
+Executing a wipe command will result in permanent loss of all data on the selected storage device.
+
+Always double-check your selection before proceeding.
+
+---
+
+## License
+
+This project is distributed under the GNU GPL v3 License.
+
+See the `LICENSE` file for full terms and conditions.
