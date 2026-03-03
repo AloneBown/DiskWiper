@@ -1,23 +1,20 @@
 ---
-name: ✨ Feature request
-about: Suggest a new feature or improvement for DiskWiper
-title: "[FEATURE] "
-labels: enhancement
+name: Feature request
+about: Suggest an idea for this project
+title: "[NEW FEATURE]"
+labels: Enhancement
 assignees: ''
+
 ---
 
-## ✨ Feature Description
-Describe the feature or improvement you would like to see.
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-## ❓ Problem It Solves
-Explain what problem this feature addresses or why it would be useful.
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## 💡 Proposed Solution
-(Optional)  
-Describe how you think this feature could be implemented.
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-## 🔄 Alternatives Considered
-Describe any alternative solutions or features you’ve considered.
-
-## 📎 Additional Context
-Screenshots, mockups, references to similar tools, etc.
+**Additional context**
+Add any other context or screenshots about the feature request here.
