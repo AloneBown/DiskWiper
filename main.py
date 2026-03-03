@@ -22,7 +22,7 @@ import threading, os, json, time
 from core import DiskCore
 import qrcode
 
-VERSION = "1.0.4"
+VERSION = "1.1"
 APP_NAME = "DiskWiper"
 CONFIG_NAME = "config.json"
 
