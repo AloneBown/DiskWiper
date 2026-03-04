@@ -24,8 +24,9 @@ SMART_NAMES = {
     1: "Raw read error rate", 2: "Throughput Performance", 3: "Spin-up time", 4: "Start/stop count",
     5: "Reallocated sector count", 6: "Read Channel Margin", 7: "Seek error rate", 8: "Seek time performance", 
     9: "Power-on time", 10: "Spin retry count", 11: "Recalibration retries", 12: "Power cycle count", 
-    13: "Soft read error rate", 22: "Current Helium Level",
-    160: "Uncorrectable sector count read/write", 161: "Number of valid spare block", 
+    13: "Soft read error rate", 17: "Helium Condition Lower", 18: "Helium Condition Upper", 
+    22: "Current Helium Level", 100: "Erase/Program Cycles", 103: "Translation Table Rebuild", 
+    138: "Spare Block Count", 160: "Uncorrectable sector count read/write", 161: "Number of valid spare block", 
     163: "Number of initial invalid block", 164: "Total erase count", 165: "Maximum erase count", 
     166: "Minimum erase count", 167: "Average erase count", 168: "Max NAND erase count", 
     169: "Total bad block count / SMI remain life", 170: "Available Reserved Space",
@@ -33,24 +34,30 @@ SMART_NAMES = {
     174: "Unexpected Power Loss Count", 175: "Bad Cluster Table Count", 176: "Erase Failure Count",
     177: "Wear Range Delta", 178: "Used Reserved Block Count", 179: "Used Reserved Block Count Total",
     180: "Unused Reserved Block Count", 181: "Program Fail Count Total", 182: "Erase Fail Count", 
-    183: "SATA Downshift Error", 184: "End-to-End error", 187: "Reported Uncorrectable Errors", 
-    188: "Command Timeout", 189: "High Fly Writes", 190: "Airflow Temperature", 191: "G-SENSOR shock counter", 
+    183: "SATA Downshift Error", 184: "End-to-End error", 185: "Head Stability", 
+    186: "Induced Op-Vibration Count", 187: "Reported Uncorrectable Errors", 188: "Command Timeout", 
+    189: "High Fly Writes", 190: "Airflow Temperature", 191: "G-SENSOR shock counter", 
     192: "Power-off retract count", 193: "Load/unload cycle count", 194: "HDA Temperature", 
     195: "Hardware ECC Recovered", 196: "Reallocation event count", 197: "Current pending sector count", 
     198: "Offline uncorrectable", 199: "Ultra DMA CRC errors", 200: "Write error rate / Multi-Zone Error", 
     201: "Soft Read Error Rate", 202: "Data Address Mark errors", 203: "Run Out Cancel", 204: "Soft ECC Correction",
     205: "Thermal Asperity Rate", 206: "Flying Height", 207: "Spin High Current", 208: "Spin Buzz", 
-    209: "Offline Seek Performance", 211: "Vibration During Write", 212: "Shock During Write",
+    209: "Offline Seek Performance", 210: "Vibration During Read", 211: "Vibration During Write", 
+    212: "Shock During Write", 214: "Mechanical Start/Stop", 218: "CRC Error Count", 220: "Disk Shift",
     221: "G-Sense Error Rate", 222: "Loaded Hours", 223: "Load/Unload Retry Count", 224: "Load Friction",
     225: "Load/Unload Cycle Count", 226: "Load-In Time", 227: "Torq-Amp Count", 228: "Power-Off Retract Cycle",
     230: "GMR Head Amplitude", 231: "SSD Life Left / Temperature", 232: "Available Reserved Space",
     233: "Media Wearout Indicator", 234: "Average erase count", 235: "Good Block Count",
-    240: "Head flying hours", 241: "Total sectors write", 242: "Total LBA read", 
-    246: "Total Host Sector Writes", 247: "Host Program Page Count", 248: "Background Program Page Count", 
-    250: "Read Error Retry Rate", 254: "Free-fall counter"
+    236: "Total Erase Count / NAND Erase Fail", 237: "Endurance Remaining", 240: "Head flying hours", 
+    241: "Total sectors write", 242: "Total LBA read", 243: "Total LBA Written Expanded", 
+    244: "Total LBA Read Expanded", 245: "Timed Workload Media Wear", 246: "Total Host Sector Writes", 
+    247: "Host Program Page Count", 248: "Background Program Page Count", 249: "NAND Writes (1GiB)", 
+    250: "Read Error Retry Rate", 251: "Minimum Spares Remaining", 252: "Newly Added Bad Flash Block", 
+    254: "Free-fall counter"
 }
 
 class DiskCore:
+    # Hardware communication interface
     CREATE_NO_WINDOW = 0x08000000
 
     def __init__(self):
@@ -89,9 +96,11 @@ class DiskCore:
             ]
             self.disks.sort(key=lambda x: int(x['Number']))
             return self.disks
-        except: return []
+        except Exception: 
+            return []
 
     def get_detailed_smart(self, disk_number):
+        # Native WMI payload evaluation
         data = self._get_smart_legacy(disk_number)
         
         if not data:
@@ -100,9 +109,9 @@ class DiskCore:
         if data:
             existing_ids = {d.get('ID') for d in data}
             if 5 not in existing_ids:
-                data.append({'ID': 5, 'Name': SMART_NAMES[5], 'Value': '100', 'Worst': '100', 'Raw': '0'})
+                data.append({'ID': 5, 'Name': SMART_NAMES.get(5), 'Value': '100', 'Worst': '100', 'Raw': '0'})
             if 197 not in existing_ids:
-                data.append({'ID': 197, 'Name': SMART_NAMES[197], 'Value': '100', 'Worst': '100', 'Raw': '0'})
+                data.append({'ID': 197, 'Name': SMART_NAMES.get(197), 'Value': '100', 'Worst': '100', 'Raw': '0'})
                 
             def sort_key(x):
                 aid = x.get('ID')
@@ -113,6 +122,7 @@ class DiskCore:
         return data
 
     def _get_smart_fallback(self, disk_number):
+        # Fallback mechanism for restricted USB/NVMe enclosures
         ps_cmd = (
             f"$pd = Get-PhysicalDisk | Where-Object DeviceId -eq '{disk_number}'; "
             "if ($pd) { $cnt = $pd | Get-StorageReliabilityCounter -ErrorAction SilentlyContinue; "
@@ -148,6 +158,7 @@ class DiskCore:
             return []
 
     def _get_smart_legacy(self, disk_number):
+        # Hardware specific WMI controller interrogation
         ps_script = f"""
         $dd = Get-WmiObject Win32_DiskDrive | Where-Object Index -eq {disk_number}
         if ($dd) {{
@@ -192,11 +203,13 @@ class DiskCore:
                 is_ssd = (media_type == "SSD") or ("ssd" in fname) or (btype == "NVME") or (spindle == "0")
             
             has_ssd_attr = any(d.get('ID') in {231, 233, 177, 179, 180, 247, 248, 160, 161, 164, 168, 169} for d in raw_list)
-            if has_ssd_attr: is_ssd = True
+            if has_ssd_attr: 
+                is_ssd = True
             
             res = []
             for d in raw_list:
-                if not is_ssd and d['ID'] in (231, 233): continue
+                if not is_ssd and d['ID'] in (231, 233): 
+                    continue
                 d['Name'] = SMART_NAMES.get(d['ID'], f"Vendor Specific ({d['ID']})")
                 d['Raw'] = str(d['Raw'])
                 res.append(d)
@@ -206,6 +219,7 @@ class DiskCore:
             return []
 
     def calculate_grade(self, smart_data, disk_details):
+        # Unified health grading heuristics
         if not smart_data:
             return {"grade": "N/A", "hours": 0, "health_pct": 0, "realloc": 0, "pending": 0, "starts": 0, "writes_gb": 0, "reads_gb": 0, "warnings": []}
             
@@ -217,17 +231,16 @@ class DiskCore:
         is_ssd = (media_type == "SSD") or ("ssd" in fname) or (btype == "NVME") or (spindle == "0")
 
         ssd_ids = {231, 233, 177, 179, 180, 247, 248, 160, 161, 164, 168, 169}
-        if not is_ssd and any(d.get('ID') in ssd_ids for d in smart_data):
-            is_ssd = True
+        if not is_ssd and any(d.get('ID') in ssd_ids for d in smart_data): is_ssd = True
         
         metrics = {}
         for d in smart_data:
             if isinstance(d['ID'], int):
                 try: metrics[d['ID']] = int(float(d['Raw']))
-                except: metrics[d['ID']] = 0
+                except Exception: metrics[d['ID']] = 0
                 if d['ID'] == 231:
                     try: metrics['life_val'] = int(d['Value'])
-                    except: pass
+                    except Exception: pass
             elif d.get('Name') == 'BytesWrittenTotal': metrics['bytes_w'] = int(float(d['Raw']))
             elif d.get('Name') == 'BytesReadTotal': metrics['bytes_r'] = int(float(d['Raw']))
             elif d.get('Name') in ('Wear', 'PercentageUsed'): metrics['wear'] = int(float(d['Raw']))
@@ -240,10 +253,8 @@ class DiskCore:
         if 'wear' in metrics:
             life = 100 - metrics['wear']
             if life < 0: life = 0
-        elif 'life_val' in metrics and metrics['life_val'] > 0:
-            life = metrics['life_val']
-        else:
-            life = 100
+        elif 'life_val' in metrics and metrics['life_val'] > 0: life = metrics['life_val']
+        else: life = 100
             
         sec_size = disk_details.get('LogicalSectorSize', 512) or 512
         gb_div = 1024**3
@@ -255,26 +266,36 @@ class DiskCore:
             writes_gb = metrics['bytes_w'] // gb_div
             reads_gb = metrics.get('bytes_r', 0) // gb_div
         else: 
-            writes_gb = round((raw_writes * sec_size) / gb_div) if raw_writes > 1000000 else raw_writes
-            reads_gb = round((raw_reads * sec_size) / gb_div) if raw_reads > 1000000 else raw_reads
+            friendly_name = str(disk_details.get("FriendlyName", "")).lower()
+            budget_brands = ['kingston', 'king cell', 'apacer', 'patriot', 'goodram', 'adata', 'silicon power', 'spcc', 'phison', 'smi', 'transcend', 'team', 'pny', 'netac', 'kingspec', 'goldenafir', 'gigabyte']
+            is_32mb = any(b in friendly_name for b in budget_brands)
 
-        grade = "D"
-        health_pct = life if is_ssd else 100
-        
+            if raw_writes > 50000000: 
+                writes_gb = round((raw_writes * sec_size) / gb_div)
+                reads_gb = round((raw_reads * sec_size) / gb_div)
+            elif is_32mb or (50000 < raw_writes < 50000000):
+                writes_gb = round((raw_writes * 32) / 1024)
+                reads_gb = round((raw_reads * 32) / 1024)
+            else:
+                writes_gb = raw_writes
+                reads_gb = raw_reads
+
         if is_ssd:
-            if realloc == 0 and hours < 20000 and starts < 3000 and life >= 95 and writes_gb < 20000 and reads_gb < 30000: grade = "A+"
-            elif realloc == 0 and hours < 25000 and starts < 5000 and life >= 75 and writes_gb < 50000 and reads_gb < 70000: grade = "A"
-            elif realloc == 0 and hours < 35000 and starts < 10000 and life >= 50 and writes_gb < 100000 and reads_gb < 120000: grade = "B"
-            elif realloc < 10 and hours < 50000 and starts < 20000 and life < 50 and writes_gb < 150000 and reads_gb <= 200000: grade = "C"
+            if realloc == 0 and pending == 0 and hours < 20000 and starts < 3000 and life >= 95 and writes_gb < 20000 and reads_gb < 30000: grade = "A+"
+            elif realloc == 0 and pending == 0 and hours < 25000 and starts < 5000 and life >= 75 and writes_gb < 50000 and reads_gb < 70000: grade = "A"
+            elif realloc == 0 and pending == 0 and hours < 35000 and starts < 10000 and life >= 50 and writes_gb < 100000 and reads_gb < 120000: grade = "B"
+            elif realloc < 10 and pending < 10 and hours < 50000 and starts < 20000 and life >= 10 and writes_gb < 150000 and reads_gb <= 200000: grade = "C"
             else: grade = "D"
         else:
             if realloc == 0 and pending == 0 and hours < 20000: grade = "A+"
-            elif realloc <= 20 and pending == 0 and hours > 20000: grade = "A"
-            elif realloc <= 200 and pending == 0 and hours < 25000: grade = "B"
-            elif realloc <= 2000 or pending < 10: grade = "C"
+            elif realloc <= 20 and pending == 0 and hours < 40000: grade = "A"
+            elif realloc <= 200 and pending == 0 and hours < 60000: grade = "B"
+            elif realloc <= 2000 and pending < 10: grade = "C"
             else: grade = "D"
 
+        health_pct = life if is_ssd else 100
         warnings = []
+        
         if metrics.get(199, 0) > 0: warnings.append(f"CRC_Err:{metrics[199]}")
         uncorr = max(metrics.get(187, 0), metrics.get(198, 0))
         if uncorr > 0: warnings.append(f"Uncorr:{uncorr}")
@@ -294,10 +315,12 @@ class DiskCore:
         return {
             "grade": grade, "hours": hours, "health_pct": health_pct,
             "realloc": realloc, "pending": pending, "starts": starts,
-            "writes_gb": writes_gb, "reads_gb": reads_gb, "warnings": warnings
+            "writes_gb": writes_gb, "reads_gb": reads_gb, "warnings": warnings,
+            "is_ssd": is_ssd
         }
 
     def wipe_disk(self, disk_id, fs_type, callback_log):
+        # Destructive execution wrapper
         if str(disk_id) == '0':
             callback_log("[ERR] Security restriction: Wiping Disk 0 is forbidden.", "error")
             return False
@@ -305,16 +328,20 @@ class DiskCore:
         callback_log(f"[*] Starting wipe for Disk {disk_id} -> {fs_type.upper()}", "info")
         commands = [f"select disk {disk_id}", "clean", "create partition primary", f"format fs={fs_type.lower()} quick", "assign", "exit"]
         tmp_path = None
+        
         try:
             with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:
                 f.write("\n".join(commands))
                 tmp_path = f.name
+                
             res = subprocess.run(['diskpart', '/s', tmp_path], capture_output=True, text=True, encoding='cp866', creationflags=self.CREATE_NO_WINDOW)
             if res.returncode == 0:
                 callback_log(f"[OK] Disk {disk_id} wipe completed successfully.", "success")
                 return True
+                
             callback_log(f"[ERR] Disk {disk_id} error: {res.stderr[:50]}", "error")
             return False
+            
         finally:
             if tmp_path and os.path.exists(tmp_path):
                 try: os.remove(tmp_path)
