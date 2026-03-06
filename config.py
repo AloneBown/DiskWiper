@@ -1,5 +1,5 @@
 # Application constants and configuration
-VERSION = "1.1.1"
+VERSION = "1.1.2"
 APP_NAME = "DiskWiper"
 CONFIG_NAME = "config.json"
 GITHUB_REPO = "AloneBown/DiskWiper"
