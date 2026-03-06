@@ -1,0 +1,2010 @@
+{
+    "base": {
+        "1": "Raw Read Error Count",
+        "2": "Throughput Performance",
+        "3": "Spin-Up Time",
+        "4": "Start Stop Count",
+        "5": "Reallocated Sector Count",
+        "6": "Read Channel Margin",
+        "7": "Seek Error Rate",
+        "8": "Seek Time Performance",
+        "9": "Power On Hours",
+        "10": "Spin Retry Count",
+        "11": "Calibration Retry Count",
+        "12": "Power Cycle Count",
+        "13": "Read Soft Error Rate",
+        "14": "Device Raw Capacity",
+        "15": "Device User Capacity",
+        "16": "Initial Spare Blocks",
+        "17": "Remaining Spare Blocks",
+        "18": "Head Health",
+        "22": "Helium Level",
+        "23": "Helium Condition Lower",
+        "24": "Helium Condition Upper",
+        "27": "MAMR Health Monitor",
+        "32": "Lifetime Write AmpFctr",
+        "33": "Write AmpFctr",
+        "71": "Milli Micro Actuator",
+        "82": "Head Health Score",
+        "90": "NAND Master",
+        "100": "Total Erase Count",
+        "102": "Lifetime PS4 Entry Ct",
+        "103": "Lifetime PS3 Exit Ct",
+        "110": "Proprietary HWC",
+        "111": "Proprietary MP",
+        "112": "Proprietary RtR",
+        "113": "Proprietary RR",
+        "120": "Proprietary HFAll",
+        "121": "Proprietary HF1st",
+        "122": "Proprietary HF2nd",
+        "123": "Proprietary HF3rd",
+        "125": "Proprietary SFAll",
+        "126": "Proprietary SF1st",
+        "127": "Proprietary SF2nd",
+        "128": "Proprietary SF3rd",
+        "148": "Total SLC Erase Ct",
+        "149": "Max SLC Erase Ct",
+        "150": "Min SLC Erase Ct",
+        "151": "Average SLC Erase Ct",
+        "159": "DRAM 1 Bit Error Count",
+        "160": "Uncorrectable Error Cnt",
+        "161": "Valid Spare Block Cnt",
+        "162": "Spare Block Count",
+        "163": "Initial Bad Block Count",
+        "164": "Total Erase Count",
+        "165": "Max Erase Count",
+        "166": "Min Erase Count",
+        "167": "Average Erase Count",
+        "168": "SATA PHY Error Count",
+        "169": "Remaining Lifetime Perc",
+        "170": "Available Reservd Space",
+        "171": "Program Fail Count",
+        "172": "Erase Fail Count",
+        "173": "Wear Leveling Count",
+        "174": "Unexpect Power Loss Ct",
+        "175": "Bad Cluster Table Count",
+        "176": "Erase Fail Count Chip",
+        "177": "Wear Range Delta",
+        "178": "Runtime Invalid Blk Cnt",
+        "179": "Used Rsvd Blk Cnt Tot",
+        "180": "End to End Err Detect",
+        "181": "Non4k Aligned Access",
+        "182": "Erase Fail Count",
+        "183": "SATA Downshift Count",
+        "184": "End-to-End Error",
+        "185": "E2E ErrCnt SATA",
+        "187": "Reported Uncorrectable Errors",
+        "188": "Command Timeout",
+        "189": "Factory Bad Block Ct",
+        "190": "Airflow Temperature",
+        "191": "G-Sensor Shock Count",
+        "192": "Unsafe Shutdown Count",
+        "193": "Load/Unload Cycle Count",
+        "194": "Temperature",
+        "195": "Hardware ECC Recovered",
+        "196": "Reallocation Event Count",
+        "197": "Current Pending Sector Count",
+        "198": "Offline Uncorrectable",
+        "199": "CRC Error Count",
+        "200": "Write Error Rate",
+        "201": "Soft Read Error Rate",
+        "202": "Data Address Mark Errors",
+        "203": "Run Out Cancel",
+        "204": "Soft ECC Correction",
+        "205": "Thermal Asperity Rate",
+        "206": "Flying Height",
+        "207": "Spin High Current",
+        "208": "Spin Buzz",
+        "209": "Offline Seek Performnce",
+        "210": "SATA CRC Error Count",
+        "211": "Vibration During Write",
+        "212": "Shock During Write",
+        "213": "Spare Block Cnt Worst",
+        "214": "Reserved Attribute",
+        "215": "Current TRIM Percent",
+        "218": "CRC Error Count",
+        "220": "Disk Shift",
+        "221": "G-Sense Error Rate",
+        "222": "Loaded Hours",
+        "223": "Load Retry Count",
+        "224": "Load Friction",
+        "225": "Load/Unload Cycle Count",
+        "226": "Load-In Time",
+        "227": "Torq-Amp Count",
+        "228": "Power-Off Retract Cycle",
+        "229": "Flash ID",
+        "230": "GMR Head Amplitude",
+        "231": "SSD Life Left / Temperature",
+        "232": "Available Reserved Space",
+        "233": "Media Wearout Indicator",
+        "234": "Average Erase Count",
+        "235": "Good Block Count",
+        "236": "Unstable Power Count",
+        "237": "Flash Writes LBAs High",
+        "240": "Head Flying Hours",
+        "241": "Total LBAs Written",
+        "242": "Total LBAs Read",
+        "243": "NAND Writes 32MiB",
+        "244": "Average Erase Count",
+        "245": "Max Erase Count",
+        "246": "Total Host Sector Writes",
+        "247": "Host Program Page Count",
+        "248": "Background Program Page Count",
+        "249": "NAND Writes 1GiB",
+        "250": "Read Error Retry Rate",
+        "251": "Total NAND Read Ct GiB",
+        "252": "Added Bad Flash Blk Ct",
+        "253": "Unkn CrucialMicron Attr",
+        "254": "Free Fall Sensor"
+    },
+    "models": [
+        {
+            "regex": "-",
+            "attributes": {
+                "1": "Raw Read Error Rate",
+                "2": "Throughput Performance",
+                "4": "Start Stop Count",
+                "6": "Read Channel Margin",
+                "7": "Seek Error Rate",
+                "8": "Seek Time Performance",
+                "10": "Spin Retry Count",
+                "11": "Calibration Retry Count",
+                "12": "Power Cycle Count",
+                "13": "Read Soft Error Rate",
+                "22": "Helium Level",
+                "23": "Helium Condition Lower",
+                "24": "Helium Condition Upper",
+                "175": "Program Fail Count Chip",
+                "176": "Erase Fail Count Chip",
+                "177": "Wear Leveling Count",
+                "178": "Used Rsvd Blk Cnt Chip",
+                "179": "Used Rsvd Blk Cnt Tot",
+                "180": "Unused Rsvd Blk Cnt Tot",
+                "181": "Program Fail Cnt Total",
+                "182": "Erase Fail Count Total",
+                "183": "Runtime Bad Block",
+                "184": "End",
+                "187": "Reported Uncorrect",
+                "188": "Command Timeout",
+                "189": "High Fly Writes",
+                "190": "Airflow Temperature Cel",
+                "191": "G",
+                "192": "Power",
+                "193": "Load Cycle Count",
+                "194": "Temperature Celsius",
+                "195": "Hardware ECC Recovered",
+                "197": "Current Pending Sector",
+                "198": "Offline Uncorrectable",
+                "199": "UDMA CRC Error Count",
+                "200": "Multi Zone Error Rate",
+                "201": "Soft Read Error Rate",
+                "202": "Data Address Mark Errs",
+                "203": "Run Out Cancel",
+                "204": "Soft ECC Correction",
+                "205": "Thermal Asperity Rate",
+                "206": "Flying Height",
+                "207": "Spin High Current",
+                "208": "Spin Buzz",
+                "209": "Offline Seek Performnce",
+                "220": "Disk Shift",
+                "221": "G",
+                "222": "Loaded Hours",
+                "223": "Load Retry Count",
+                "224": "Load Friction",
+                "225": "Load Cycle Count",
+                "226": "Load",
+                "227": "Torq",
+                "228": "Power",
+                "230": "Head Amplitude",
+                "231": "Temperature Celsius",
+                "232": "Available Reservd Space",
+                "233": "Media Wearout Indicator",
+                "241": "Total LBAs Written",
+                "242": "Total LBAs Read",
+                "250": "Read Error Retry Rate",
+                "254": "Free Fall Sensor"
+            },
+            "life_id": "177"
+        },
+        {
+            "regex": "SFCF(2048|4096|8192|16GB|32GB|64GB)H[0-9]BU[24]TO-(C|I)-(MS|QT|NU)-5[0-9]7-STD",
+            "attributes": {
+                "229": "Erase Count",
+                "203": "Total ECC Errors",
+                "232": "Total Number of Reads",
+                "214": "Reserved Attribute",
+                "215": "Current TRIM Percent"
+            }
+        },
+        {
+            "regex": "SFSA(008|016|032|064|128)GU[0-9]AA[124]TO-(C|I)-(DB|QC|NC)-2[0-9]6-STD",
+            "attributes": {
+                "160": "Uncorrectable Error Cnt",
+                "161": "Spare Blocks Remaining",
+                "163": "Initial Bad Block Count",
+                "164": "Total Erase Count",
+                "165": "Max Erase Count",
+                "166": "Min Erase Count",
+                "167": "Average Erase Count",
+                "168": "Max Erase Count of Spec",
+                "169": "Power On Uncorr Err Cnt",
+                "192": "Init Spare Blocks Avail",
+                "193": "Dynamic Remaps",
+                "199": "SATA CRC Error Count",
+                "215": "TRIM Count",
+                "235": "Flash Writes LBAs Low",
+                "237": "Flash Writes LBAs High",
+                "241": "Total LBAs Written Low",
+                "242": "Total LBAs Read Low",
+                "243": "Total LBAs Written High",
+                "244": "Total LBAs Read High",
+                "248": "Perc Rated Life Remain",
+                "249": "Spares Remaining Perc"
+            }
+        },
+        {
+            "regex": "SFSA....[MQSUV].AK.T[ABO].............",
+            "attributes": {
+                "16": "Avg Erase Count pSLC",
+                "17": "Rated Erase Count pSLC",
+                "160": "UECC Sector Count",
+                "161": "Spare Block Count",
+                "163": "Initial Bad Block Count",
+                "164": "Total Erase Count",
+                "165": "Maximum Erase Count",
+                "166": "Minimum Erase Count",
+                "167": "Average Erase Count",
+                "168": "Rated Erase Count",
+                "169": "Power On UECC Err Cnt",
+                "193": "Dynamic Remaps",
+                "215": "Number of TRIM Commands",
+                "231": "Life Remaining Percent",
+                "235": "Flash LBAs Written",
+                "237": "Flash LBAs Written Exp",
+                "243": "Host LBA Write Exp",
+                "244": "Host LBA Read Exp",
+                "248": "SSD Remaining Life Perc"
+            }
+        },
+        {
+            "regex": "SFSA....M.AO.TO.............",
+            "attributes": {
+                "165": "Maximum Erase Count",
+                "167": "Average Erase Count",
+                "168": "Rated Erase Count",
+                "169": "Power On Data Repairs",
+                "185": "E2E ErrCnt SATA",
+                "196": "Total Spare Block Cnt",
+                "200": "SATA COM Reset",
+                "213": "Spare Block Cnt Worst",
+                "215": "Trim Status",
+                "229": "Total Flash Blk Erases",
+                "232": "Total Read Cnt",
+                "241": "Total Host LBA Written",
+                "242": "Total Host LBA Read",
+                "248": "Remaining Life"
+            }
+        },
+        {
+            "regex": "(2|4|8|16|32|64)GB SATA Flash Drive",
+            "attributes": {
+                "160": "Initial Bad Block Count",
+                "161": "Bad Block Count",
+                "162": "Spare Block Count",
+                "163": "Max Erase Count",
+                "164": "Average Erase Count",
+                "165": "Average Erase Count"
+            }
+        },
+        {
+            "regex": "(1|2|4|8|16|32|64)GB SATA Flash Drive",
+            "attributes": {
+                "163": "Max Erase Count",
+                "164": "Average Erase Count",
+                "166": "Grown Bad Block Count",
+                "167": "SSD Write Protect Mode",
+                "168": "SATA PHY Err Ct",
+                "175": "Bad Cluster Table Count",
+                "192": "Unexpect Power Loss Ct"
+            }
+        },
+        {
+            "regex": "Apacer AS3[45]0 ((12[08]|240|256|480|512|960)G|1T)B",
+            "attributes": {
+                "163": "Max Erase Count",
+                "164": "Average Erase Count",
+                "166": "Later Bad Block Count",
+                "167": "SSD Protect Mode",
+                "168": "SATA PHY Error Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "175": "Bad Cluster Table Count",
+                "192": "Unexpect Power Loss Ct",
+                "231": "Lifetime Left"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "([1248]|1[056]|20|3[02]|40|60|64|80|12[08]|160|240|256|320|480|512|640|960|1024|1280|1920|2048|3840|4096)(GB|TB) SATA Flash Drive|",
+            "attributes": {
+                "163": "Maximum Erase Count",
+                "164": "Average Erase Count",
+                "166": "Total Later Bad Blk Ct",
+                "167": "SSD Protect Mode",
+                "168": "SATA PHY Error Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "175": "Bad Cluster Table Ct",
+                "192": "Unexpect Power Loss Ct",
+                "231": "Lifetime Left"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "APPLE SSD TS(064|128)E",
+            "attributes": {
+                "173": "Wear Leveling Count",
+                "241": "Host Writes GiB",
+                "242": "Host Reades GiB"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "APPLE SSD (S[DM]|TS)0?(128|256|512|768|1024)[EFG]",
+            "attributes": {
+                "173": "Wear Leveling Count",
+                "174": "Host Reads MiB",
+                "175": "Host Writes MiB"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "ATP SATA III (M.2 (2242|2280)|mSATA|mSATA SSD|2.5 inch)",
+            "attributes": {
+                "1": "Raw Read Error Count",
+                "168": "SATA PHY Error Count",
+                "170": "Bad Bl Ct LATER 0 EARLY",
+                "173": "Erase Count 0 AVG MAX",
+                "192": "Unexpected Power Loss",
+                "218": "CRC Errors",
+                "231": "Percent Lifetime Remain",
+                "241": "Host Writes GiB"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "ATP (SATA III|SATAIII|I-Temp. SATA III|I-Temp. SATAIII) (M.2 (2242|2280)|mSATA|2.5 inch) SSD",
+            "attributes": {
+                "1": "Raw Read Error Count",
+                "14": "Device Raw Capacity",
+                "15": "Device User Capacity",
+                "16": "Initial Spare Blocks",
+                "17": "Remaining Spare Blocks",
+                "100": "Total Erease Count",
+                "160": "Uncorrectable Sectors",
+                "172": "Block Erase Failures",
+                "173": "Maximum Erase Count",
+                "174": "Unexpected Power Loss",
+                "175": "Average Erase Count",
+                "181": "Block Program Failures",
+                "187": "Reported Uncorr Errors",
+                "197": "Current Pending ECC Cnt",
+                "198": "Offline UErr Media Scan",
+                "199": "SATA FIS CRC Errors",
+                "202": "Percent Lifetime Used",
+                "205": "Thermal Asperity Rate",
+                "231": "Controller Temperature",
+                "234": "Sectors Read from NAND",
+                "235": "Sectors Written to SSD",
+                "241": "Sectors Written to NAND",
+                "242": "Sectors Read from SSD",
+                "248": "Percent Lifetime Remain",
+                "249": "Spare Blocks Remaining"
+            },
+            "life_id": "202"
+        },
+        {
+            "regex": "ATP I-Temp M\\\\.2 22(42|80)",
+            "attributes": {
+                "1": "Raw Read Error Count",
+                "14": "Device Raw Capacity",
+                "15": "Device User Capacity",
+                "16": "Initial Spare Blocks",
+                "17": "Remaining Spare Blocks",
+                "100": "Total Erease Count",
+                "160": "Uncorrectable Sectors",
+                "172": "Block Erase Failure",
+                "173": "Max Erase Count",
+                "174": "Unexpected Power Cycle",
+                "175": "Average Erase Count",
+                "181": "Program Fail Blocks",
+                "187": "Reported UE Counts",
+                "194": "Device Temperature",
+                "199": "SATA CRC Error Count",
+                "202": "Percent Lifetime Used",
+                "205": "Thermal Asperity Rate",
+                "231": "Controller Temperature",
+                "234": "Nand Sectors Read",
+                "235": "Device Sectors Written",
+                "241": "Nand Sectors Written",
+                "242": "Device Bytes Read",
+                "248": "PCT Life Remaining",
+                "249": "Spare Block Remaining"
+            },
+            "life_id": "202"
+        },
+        {
+            "regex": "C300-CTFDDA[AC](064|128|256)MAG|",
+            "attributes": {
+                "170": "Grown Failing Block Ct",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Wear Leveling Count",
+                "174": "Unexpect Power Loss Ct",
+                "181": "Non4k Aligned Access",
+                "183": "SATA Iface Downshift",
+                "189": "Factory Bad Block Ct",
+                "202": "Percent Lifetime Used",
+                "206": "Write Error Rate"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "C400-MTFDDA[ACK](064|128|256|512)MAM|",
+            "attributes": {
+                "170": "Grown Failing Block Ct",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Wear Leveling Count",
+                "174": "Unexpect Power Loss Ct",
+                "181": "Non4k Aligned Access",
+                "183": "SATA Iface Downshift",
+                "189": "Factory Bad Block Ct",
+                "202": "Perc Rated Life Used",
+                "206": "Write Error Rate",
+                "242": "Host Reads"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "C400-MTFDDA[ACK](064|128|256|512)MAM|",
+            "attributes": {
+                "170": "Grown Failing Block Ct",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Wear Leveling Count",
+                "174": "Unexpect Power Loss Ct",
+                "181": "Non4k Aligned Access",
+                "183": "SATA Iface Downshift",
+                "189": "Factory Bad Block Ct",
+                "202": "Perc Rated Life Used",
+                "206": "Write Error Rate"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "Crucial_CT(128|256|512)MX100SSD1|",
+            "attributes": {
+                "5": "Reallocate NAND Blk Cnt",
+                "170": "Reserved Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Ave Block",
+                "174": "Unexpect Power Loss Ct",
+                "180": "Unused Reserve NAND Blk",
+                "183": "SATA Interfac Downshift",
+                "184": "Error Correction Count",
+                "195": "Cumulativ Corrected ECC",
+                "197": "Current Pending ECC Cnt",
+                "202": "Percent Lifetime Remain",
+                "206": "Write Error Rate",
+                "210": "Success RAIN Recov Cnt",
+                "223": "Unkn CrucialMicron Attr",
+                "246": "Total LBAs Written",
+                "247": "Host Program Page Count",
+                "248": "FTL Program Page Count",
+                "249": "Unkn CrucialMicron Attr",
+                "251": "Unkn CrucialMicron Attr",
+                "252": "Unkn CrucialMicron Attr",
+                "253": "Unkn CrucialMicron Attr",
+                "254": "Unkn CrucialMicron Attr"
+            },
+            "life_id": "202"
+        },
+        {
+            "regex": "Lexar 128GB SSD",
+            "attributes": {
+                "5": "New Bad Blk Cnt",
+                "167": "SSD Protect mode",
+                "168": "SATA PHY Error Cnt",
+                "169": "Bad Block Cnt",
+                "171": "Program Fail Cnt",
+                "172": "Erase Fail Cnt",
+                "173": "Erase Cnt",
+                "175": "Bad Cluster Cnt",
+                "177": "Read Retry Cnt",
+                "180": "Spare Blk Cnt Left",
+                "206": "Min Erase Cnt",
+                "207": "Max Erase Cnt",
+                "208": "Avg Erase Cnt",
+                "209": "SLC Min Erase Cnt",
+                "210": "SLC Max Erase Cnt",
+                "211": "SLC Avg Erase Cnt",
+                "231": "SSD Life Left",
+                "245": "Bit Error Cnt"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "(Micron_5100_)?(EE|MT)FDDA[KV](240|480|960|1T9|3T8|7T6)T(BY|CB|CC)|",
+            "attributes": {
+                "170": "Reserved Block Pct",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Avg Block",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Int Downshift Ct",
+                "202": "Percent Lifetime Remain",
+                "206": "Write Error Rate",
+                "210": "RAIN Success Recovered",
+                "211": "Integ Scan Complete Cnt",
+                "212": "Integ Scan Folding Cnt",
+                "213": "Integ Scan Progress",
+                "246": "Total LBAs Written",
+                "247": "Host Program Page Count",
+                "248": "Bckgnd Program Page Cnt"
+            },
+            "life_id": "202"
+        },
+        {
+            "regex": "Micron_M500DC_(EE|MT)FDDA[AK](120|240|480|800)MBB|",
+            "attributes": {
+                "5": "Reallocated Block Count",
+                "170": "Reserved Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Ave Block",
+                "174": "Unexpect Power Loss Ct",
+                "184": "Error Correction Count",
+                "188": "Command Timeouts",
+                "195": "Cumulativ Corrected ECC",
+                "202": "Percent Lifetime Remain",
+                "206": "Write Error Rate",
+                "247": "Host Program Page Count",
+                "248": "Bckgnd Program Page Cnt"
+            },
+            "life_id": "202"
+        },
+        {
+            "regex": "Corsair Force LS SSD",
+            "attributes": {
+                "5": "Retired Block Count",
+                "9": "Power On Hours and Msec",
+                "170": "Reserve Block Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "181": "Program Fail Count",
+                "231": "SSD Life Left",
+                "241": "Lifetime Writes GiB",
+                "242": "Lifetime Reads GiB"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "SanDisk SDSSDA(120|240|480)G|",
+            "attributes": {
+                "5": "Retired Block Count",
+                "166": "Min PE Cycles",
+                "167": "Max Bad Blocks Per Die",
+                "168": "Max PE Cycles",
+                "169": "Total Bad Blocks",
+                "170": "Grown Bad Blocks",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Average PE Cycles",
+                "174": "Unexpect Power Loss Ct",
+                "230": "Media Wearout Indicator",
+                "233": "NAND GiB Written",
+                "241": "Lifetime Writes GiB",
+                "242": "Lifetime Reads GiB"
+            },
+            "life_id": "230"
+        },
+        {
+            "regex": "SandForce 1st Ed\\\\.|",
+            "attributes": {
+                "5": "Retired Block Count",
+                "9": "Power On Hours and Msec",
+                "100": "Gigabytes Erased",
+                "170": "Reserve Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "177": "Wear Range Delta",
+                "181": "Program Fail Count",
+                "182": "Erase Fail Count",
+                "184": "IO Error Detect Code Ct",
+                "189": "Airflow Temperature Cel",
+                "199": "SATA CRC Error Count",
+                "230": "Life Curve Status",
+                "231": "SSD Life Left",
+                "233": "SandForce Internal",
+                "234": "SandForce Internal",
+                "235": "SuperCap Health",
+                "241": "Lifetime Writes GiB",
+                "242": "Lifetime Reads GiB"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "StorFly VSFCS2C[CI](016|030|060|120|240)G-...",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "160": "Uncorrectable Error Cnt",
+                "161": "Spares Remaining",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "169": "Lifetime Remaining",
+                "248": "Lifetime Remaining",
+                "249": "Spares Remaining Perc"
+            },
+            "life_id": "169"
+        },
+        {
+            "regex": "BP4 mSATA SSD|",
+            "attributes": {
+                "2": "Not In Use",
+                "3": "Not In Use",
+                "5": "Retired Block Count",
+                "7": "Not In Use",
+                "8": "Not In Use",
+                "10": "Not In Use",
+                "167": "Write Protect Mode",
+                "168": "SATA Phy Error Count",
+                "169": "Bad Block Rate",
+                "172": "Erase Fail Count",
+                "175": "Not In Use",
+                "181": "Program Fail Count",
+                "182": "Erase Fail Count",
+                "192": "Unsafe Shutdown Count",
+                "193": "Power Fail Uncompl Cnt",
+                "195": "Power Fail Health",
+                "197": "Not In Use",
+                "199": "SATA CRC Error Count",
+                "207": "Thermal Throttling Cnt",
+                "218": "CRC Error Count",
+                "231": "SSD Life Left",
+                "232": "Read Fail Count",
+                "233": "Flash Writes GiB",
+                "240": "Not In Use",
+                "241": "Lifetime Writes GiB",
+                "242": "Lifetime Reads GiB",
+                "244": "Average Erase Count",
+                "245": "Max Erase Count",
+                "246": "Total Erase Count"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "Gigastone SSD|",
+            "attributes": {
+                "2": "Not In Use",
+                "3": "Not In Use",
+                "5": "Retired Block Count",
+                "7": "Not In Use",
+                "8": "Not In Use",
+                "10": "Not In Use",
+                "168": "SATA Phy Error Count",
+                "175": "Not In Use",
+                "192": "Unsafe Shutdown Count",
+                "196": "Not In Use",
+                "197": "Not In Use",
+                "199": "CRC Error Count",
+                "218": "CRC Error Count",
+                "231": "SSD Life Left",
+                "233": "Flash Writes GiB",
+                "240": "Not In Use",
+                "241": "Lifetime Writes GiB",
+                "242": "Lifetime Reads GiB",
+                "244": "Average Erase Count",
+                "245": "Max Erase Count",
+                "246": "Total Erase Count"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "Corsair CSSD-V(32|60|64|128|256)GB2|",
+            "attributes": {
+                "184": "Initial Bad Block Count",
+                "195": "Program Failure Blk Ct",
+                "196": "Erase Failure Blk Ct",
+                "197": "Read Failure Blk Ct",
+                "198": "Read Sectors Tot Ct",
+                "199": "Write Sectors Tot Ct",
+                "200": "Read Commands Tot Ct",
+                "201": "Write Commands Tot Ct",
+                "202": "Error Bits Flash Tot Ct",
+                "203": "Corr Read Errors Tot Ct",
+                "204": "Bad Block Full Flag",
+                "205": "Max PE Count Spec",
+                "206": "Min Erase Count",
+                "207": "Max Erase Count",
+                "208": "Average Erase Count",
+                "209": "Remaining Lifetime Perc",
+                "210": "Indilinx Internal",
+                "211": "SATA Error Ct CRC",
+                "212": "SATA Error Ct Handshake",
+                "213": "Indilinx Internal"
+            },
+            "life_id": "209"
+        },
+        {
+            "regex": "OCZ VERTEX[ -]PLUS|",
+            "attributes": {
+                "232": "Lifetime Writes"
+            },
+            "life_id": "232"
+        },
+        {
+            "regex": "OCZ-VECTOR(1[58]0)?|",
+            "attributes": {
+                "5": "Runtime Bad Block",
+                "171": "Avail OP Block Count",
+                "174": "Pwr Cycle Ct Unplanned",
+                "187": "Total Unc NAND Reads",
+                "195": "Total Prog Failures",
+                "196": "Total Erase Failures",
+                "197": "Total Unc Read Failures",
+                "198": "Host Reads GiB",
+                "199": "Host Writes GiB",
+                "205": "Max Rated PE Count",
+                "206": "Min Erase Count",
+                "207": "Max Erase Count",
+                "208": "Average Erase Count",
+                "210": "SATA CRC Error Count",
+                "212": "Pages Requiring Rd Rtry",
+                "213": "Snmple Retry Attempts",
+                "214": "Adaptive Retry Attempts",
+                "222": "RAID Recovery Count",
+                "224": "In Warranty",
+                "225": "DAS Polarity",
+                "226": "Partial Pfail",
+                "230": "Write Throttling",
+                "233": "Remaining Lifetime Perc",
+                "241": "Host Writes GiB",
+                "242": "Host Reads GiB",
+                "249": "Total NAND Prog Ct GiB",
+                "251": "Total NAND Read Ct GiB"
+            },
+            "life_id": "233"
+        },
+        {
+            "regex": "OCZ INTREPID 3[678]00",
+            "attributes": {
+                "5": "Runtime Bad Block",
+                "100": "Total Blocks Erased",
+                "171": "Avail OP Block Count",
+                "174": "Pwr Cycle Ct Unplanned",
+                "184": "Factory Bad Block Count",
+                "187": "Total Unc NAND Reads",
+                "190": "Temperature Celsius",
+                "195": "Total Prog Failures",
+                "196": "Total Erase Failures",
+                "197": "Total Unc Read Failures",
+                "198": "Host Reads GiB",
+                "199": "Host Writes GiB",
+                "202": "Total Read Bits Corr Ct",
+                "205": "Max Rated PE Count",
+                "206": "Min Erase Count",
+                "207": "Max Erase Count",
+                "208": "Average Erase Count",
+                "210": "SATA CRC Error Count",
+                "211": "SATA UNC Count",
+                "212": "NAND Reads with Retry",
+                "213": "Simple Rd Rtry Attempts",
+                "214": "Adaptv Rd Rtry Attempts",
+                "221": "Int Data Path Prot Unc",
+                "222": "RAID Recovery Count",
+                "230": "SuperCap Charge Status",
+                "233": "Remaining Lifetime Perc",
+                "249": "Total NAND Prog Ct GiB",
+                "251": "Total NAND Read Ct GiB"
+            },
+            "life_id": "233"
+        },
+        {
+            "regex": "OCZ-TRION1[05]0|",
+            "attributes": {
+                "167": "SSD Protect Mode",
+                "168": "SATA PHY Error Count",
+                "169": "Bad Block Count",
+                "173": "Erase Count",
+                "192": "Unexpect Power Loss Ct",
+                "241": "Host Writes"
+            }
+        },
+        {
+            "regex": "InnoLite SATADOM D150QV.*",
+            "attributes": {
+                "168": "SATA PHY Error Count",
+                "170": "Bad Block Count New",
+                "173": "Erase Count Max",
+                "175": "Bad Cluster Table Count",
+                "192": "Unexpect Power Loss Ct",
+                "229": "Flash ID",
+                "235": "Lat Bad Blk Era",
+                "236": "Unstable Power Count",
+                "240": "Write Head"
+            }
+        },
+        {
+            "regex": "((1\\\\.8|2\\\\.5)\\\"? SATA SSD|InnoDisk Corp\\\\. - mSATA|Mini PCIeDOM|SATA Slim) (1ME3|3[MS]E)",
+            "attributes": {
+                "7": "Seek Error Rate",
+                "8": "Seek Time Performance",
+                "10": "Spin Retry Count",
+                "168": "SATA PHY Error Count",
+                "170": "Bad Block Count",
+                "173": "Erase Count",
+                "175": "Bad Cluster Table Count",
+                "176": "Uncorr RECORD Count",
+                "229": "Flash ID",
+                "235": "Later Bad Block",
+                "236": "Unstable Power Count",
+                "240": "Write Head"
+            }
+        },
+        {
+            "regex": "((1\\\\.8|2\\\\.5)\\\"? SATA SSD|SATA Slim|M\\\\.2 \\\\(S(42|80)\\\\)) 3(IE2|ME2|MG2|SE2|TG6)(-P)?",
+            "attributes": {
+                "160": "Uncorrectable Error Cnt",
+                "161": "Number of Pure Spare",
+                "163": "Total Bad Block Count",
+                "164": "Total Erase Count",
+                "165": "Max Erase Count",
+                "166": "Min Erase Count",
+                "167": "Average Erase Count",
+                "168": "Max Erase Count of Spec",
+                "169": "Remaining Lifetime Perc",
+                "170": "Spare Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "178": "Runtime Invalid Blk Cnt",
+                "225": "Host Writes 32MiB",
+                "229": "Flash ID",
+                "233": "Flash Writes 32MiB",
+                "234": "Flash Reads 32MiB",
+                "235": "Later Bad Block Info",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "245": "Flash Writes 32MiB",
+                "248": "Remaining Life",
+                "249": "Spare Blocks Remaining"
+            },
+            "life_id": "169"
+        },
+        {
+            "regex": "(2.5\\\" SATA SSD|CFast|Mini PCIeDOM|(InnoDisk Corp\\\\. - )?mSATA( mini)?) (1IE3|3[IM]E[34])( V2)?|",
+            "attributes": {
+                "5": "Later Bad Block",
+                "7": "Seek Error Rate",
+                "8": "Seek Time Performance",
+                "10": "Spin Retry Count",
+                "163": "Total Bad Block Count",
+                "165": "Max Erase Count",
+                "167": "Average Erase Count",
+                "168": "SATA PHY Error Count",
+                "169": "Remaining Lifetime Perc",
+                "170": "Spare Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "175": "Bad Cluster Table Count",
+                "176": "RANGE RECORD Count",
+                "225": "Data Log Write Count",
+                "229": "Flash ID",
+                "232": "Spares Remaining Perc",
+                "235": "Later Bad Blk Inf R",
+                "240": "Write Head",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB"
+            },
+            "life_id": "169"
+        },
+        {
+            "regex": "InnoDisk Corp\\\\. - (iCF9000|EDC 1SE2 H) (1|2|4|8|16|32|64)GB",
+            "attributes": {
+                "160": "Uncorrectable Error Cnt",
+                "161": "Valid Spare Block Cnt",
+                "162": "Child Pair Count",
+                "163": "Initial Bad Block Count",
+                "164": "Total Erase Count",
+                "165": "Max Erase Count",
+                "166": "Min Erase Count",
+                "167": "Average Erase Count",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB"
+            }
+        },
+        {
+            "regex": "(INTEL)?SSDSA2SH(032|064)G1.* (.*IBM|INTEL)",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Intel Internal",
+                "227": "Intel Internal",
+                "228": "Intel Internal"
+            }
+        },
+        {
+            "regex": "INTEL SSDSA[12]MH(080|160)G1.*",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Intel Internal",
+                "227": "Intel Internal",
+                "228": "Intel Internal"
+            }
+        },
+        {
+            "regex": "INTEL SSDSA[12]M(040|080|120|160)G2.*",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes"
+            }
+        },
+        {
+            "regex": "INTEL SSD(SA2VP|MAEXC)(020|024)G[23]H?",
+            "attributes": {
+                "170": "Reserve Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "183": "SATA Downshift Count",
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSA[12][BCN][WT](040|080|120|160|300|600)G3[ADHL]?",
+            "attributes": {
+                "170": "Reserve Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "183": "SATA Downshift Count",
+                "199": "CRC Error Count",
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSA2BZ(100|200|300)G3",
+            "attributes": {
+                "170": "Reserve Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC2MH(120|250)A2",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC2[BC]W(060|120|180|240|480)A3[FL]?",
+            "attributes": {
+                "9": "Power On Hours and Msec",
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDMCEAC(030|060|090|120|180|240)B3",
+            "attributes": {
+                "9": "Power On Hours and Msec",
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSD(MCEA|SC2B|SCKJ)[WF](056|080|120|180|240|360|480)(A4H?|A5L?|H6)",
+            "attributes": {
+                "9": "Power On Hours and Msec",
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC2CT(060|120|180|240)A[34]",
+            "attributes": {
+                "9": "Power On Hours and Msec",
+                "225": "Host Writes 32MiB",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC[K2]KW(120H|180H|240H|360H|480H|010X)6",
+            "attributes": {
+                "9": "Power On Hours and Msec",
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC[2K]K[WF](128G|256G|512G|010T)8.*",
+            "attributes": {
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "190": "Temperature Case",
+                "192": "Unsafe Shutdown Count",
+                "199": "CRC Error Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC(1N|2B)[ABPX]((080|100|120|150|160|200|240|300|400|480|600|800)[GH][3467][CERT]?|(012|016)T[46])|",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unsafe Shutdown Count",
+                "183": "SATA Downshift Count",
+                "190": "Temperature Case",
+                "192": "Unsafe Shutdown Count",
+                "194": "Temperature Internal",
+                "199": "CRC Error Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "243": "NAND Writes 32MiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC[2K]KF(120H|180H|240H|360H|480H|010X)6",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSCKKI(128|256|512)G8",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "249": "NAND Writes 1GiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC2BA(200G|400G|800G|012T)4.?",
+            "attributes": {
+                "9": "Power On Hours and Msec",
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable Error Cnt",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "243": "NAND Writes 32MiB"
+            }
+        },
+        {
+            "regex": "INTEL SSDSC(2|K)(J|B)B(240G|480G|960G|150G|760G|800G|012T|016T)7.?",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unsafe Shutdown Count",
+                "183": "SATA Downshift Count",
+                "184": "End",
+                "187": "Uncorrectable Error Cnt",
+                "190": "Case Temperature",
+                "192": "Unsafe Shutdown Count",
+                "194": "Drive Temperature",
+                "197": "Pending Sector Count",
+                "199": "CRC Error Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "243": "NAND Writes 32MiB"
+            }
+        },
+        {
+            "regex": "SSDSC(2|K)(J|B)B(240G|480G|960G|120G|760G|800G|012T|016T)7R.?",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "174": "Unsafe Shutdown Count",
+                "195": "Uncorrectable Error Cnt",
+                "199": "CRC Error Count",
+                "202": "End of Life",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "233": "Total LBAs Written",
+                "245": "Percent Life Remaining"
+            }
+        },
+        {
+            "regex": "(INTEL|SOLIDIGM) SSDSC(2K|KK)(B|G)(240G|480G|960G|019T|038T|076T)[78Z].?",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unsafe Shutdown Count",
+                "183": "SATA Downshift Count",
+                "184": "End",
+                "187": "Uncorrectable Error Cnt",
+                "190": "Drive Temperature",
+                "192": "Unsafe Shutdown Count",
+                "197": "Pending Sector Count",
+                "199": "CRC Error Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "243": "NAND Writes 32MiB"
+            }
+        },
+        {
+            "regex": "SSDSC(2K|KK)(B|G)(240G|480G|960G|019T|038T)(7R|8R).?",
+            "attributes": {
+                "170": "Available Reservd Space",
+                "174": "Unsafe Shutdown Count",
+                "195": "Uncorrectable Error Cnt",
+                "199": "CRC Error Count",
+                "202": "End of Life",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes",
+                "233": "Total LBAs Written",
+                "245": "Percent Life Remaining"
+            }
+        },
+        {
+            "regex": "KINGSTON SSDNow 40GB",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes"
+            }
+        },
+        {
+            "regex": "KINGSTON SSDNow 40GB",
+            "attributes": {
+                "192": "Unsafe Shutdown Count",
+                "225": "Host Writes 32MiB",
+                "226": "Workld Media Wear Indic",
+                "227": "Workld Host Reads Perc",
+                "228": "Workload Minutes"
+            }
+        },
+        {
+            "regex": "KINGSTON SUV400S37A?(120|240|480|960)G|",
+            "attributes": {
+                "170": "Reserved Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "174": "Unexpect Power Loss Ct",
+                "201": "Unc Read Error Rate",
+                "231": "SSD Life Left",
+                "241": "Host Writes GiB",
+                "242": "Host Reads GiB",
+                "250": "Read Retry Count"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "ADATA S596 Turbo|",
+            "attributes": {
+                "168": "SATA Phy Error Count",
+                "170": "Bad Block Count",
+                "173": "Erase Count",
+                "175": "Bad Cluster Table Count",
+                "192": "Unexpect Power Loss Ct"
+            }
+        },
+        {
+            "regex": "PLEXTOR  ?PX-(64|128|256|512|768)M(3P?|5[MPS]|5Pro|6[GMSV]|[78]VC)(\\\\+|-.*| )?",
+            "attributes": {
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB"
+            }
+        },
+        {
+            "regex": "SAMSUNG SSD PM800 .*GB|",
+            "attributes": {
+                "170": "Unused Rsvd Blk Ct Chip",
+                "171": "Program Fail Count Chip",
+                "172": "Erase Fail Count Chip",
+                "173": "Wear Leveling Count",
+                "174": "Unexpect Power Loss Ct",
+                "187": "Uncorrectable Error Cnt",
+                "195": "ECC Error Rate",
+                "199": "CRC Error Count",
+                "201": "Supercap Status",
+                "202": "Exception Mode Status",
+                "235": "POR Recovery Count",
+                "243": "SATA Downshift Ct",
+                "244": "Thermal Throttle St",
+                "245": "Timed Workld Media Wear",
+                "246": "Timed Workld RdWr Ratio",
+                "247": "Timed Workld Timer",
+                "249": "NAND Writes 1GiB",
+                "250": "SATA Iface Downshift",
+                "251": "NAND Writes",
+                "252": "Added Bad Flash Blk Ct"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "SanDisk SD5SG2[0-9]*G1052E|",
+            "attributes": {
+                "165": "Total Write",
+                "166": "Min W",
+                "167": "Min Bad Block",
+                "168": "Maximum Erase Cycle",
+                "169": "Total Bad Block",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Avg Write",
+                "174": "Unexpect Power Loss Ct",
+                "199": "SATA CRC Error",
+                "201": "Lifetime Remaining",
+                "212": "SATA PHY Error",
+                "230": "Perc Write",
+                "232": "Perc Avail Resrvd Space",
+                "233": "Total NAND Writes GiB",
+                "234": "Perc Write",
+                "241": "Total Writes GiB",
+                "242": "Total Reads GiB",
+                "244": "Thermal Throttle",
+                "249": "TLC NAND GB Writes"
+            },
+            "life_id": "201"
+        },
+        {
+            "regex": "SanDisk iSSD P4 [0-9]*GB|",
+            "attributes": {
+                "165": "Total Write",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Avg Write",
+                "174": "Unexpect Power Loss Ct",
+                "212": "SATA PHY Error",
+                "230": "Perc Write",
+                "232": "Perc Avail Resrvd Space",
+                "234": "Perc Write",
+                "244": "Thermal Throttle"
+            }
+        },
+        {
+            "regex": "SD[A-Z0-9]{2}[1-3][A-Z]{3}-?[0-9]{3}[GT]-?1[A-Z0-9]{3}",
+            "attributes": {
+                "13": "Lifetime UECC Ct",
+                "32": "Lifetime Write AmpFctr",
+                "33": "Write AmpFctr",
+                "170": "Reserve Erase BlkCt",
+                "171": "Program Fail Ct",
+                "172": "Erase Fail Ct",
+                "173": "Percent Life Used",
+                "174": "Unexpect Power Loss",
+                "175": "Lifetime Die Failure Ct",
+                "177": "Lifetime Remaining",
+                "178": "SSD LifeLeft",
+                "180": "Undetected Data Err Ct",
+                "183": "LT Link Rate DwnGrd Ct",
+                "191": "Clean Shutdown Ct",
+                "192": "Unclean Shutdown Ct",
+                "196": "Lifetime Retried Blk Ct",
+                "204": "Average Block",
+                "205": "Read Retry Enable Ct",
+                "206": "Successful RaidRecov Ct",
+                "207": "Trimmed Sector Ct",
+                "211": "Read Disturb ReallocEvt",
+                "233": "Lifetime Nand Writes",
+                "235": "Capacitor Health",
+                "244": "Therm Throt Activation",
+                "245": "Drive Life Remaining",
+                "253": "SPI Test Remaining"
+            },
+            "life_id": "13"
+        },
+        {
+            "regex": "SD[A-Z0-9]{2}[NO][A-Z0-9]{3}-?[0-9]{3}[GT]-?1[A-Z0-9]{3}",
+            "attributes": {
+                "1": "UECC Ct",
+                "2": "Internal File Check",
+                "32": "Write Ampflication",
+                "170": "Reserve Blk Remaining",
+                "171": "Program Fail Ct",
+                "172": "Erase Fail Ct",
+                "173": "Drive Life Used",
+                "174": "Unexpect PwrLoss Ct",
+                "175": "PwrLoss ProtectionFail",
+                "177": "DriveLife Remaining",
+                "178": "SSD Life Left",
+                "180": "End to End Err Detect",
+                "190": "Drive Temp Warning",
+                "195": "Uncorrectable Err Ct",
+                "202": "Exception Mode Status",
+                "233": "Number Of Write Ct",
+                "245": "DriveLife Used"
+            },
+            "life_id": "178"
+        },
+        {
+            "regex": "ADATA_IMSS332-((008|016|032|064|128|256|512)G|001T)[AEMT]P?|",
+            "attributes": {
+                "148": "Total SLC Erase Ct",
+                "149": "Max SLC Erase Ct",
+                "150": "Min SLC Erase Ct",
+                "151": "Average SLC Erase Ct",
+                "159": "DRAM 1 Bit Error Count",
+                "160": "Uncorrectable Error Cnt",
+                "161": "Valid Spare Block Cnt",
+                "162": "Cache Block Count",
+                "163": "Initial Bad Block Count",
+                "164": "Total Erase Count",
+                "165": "Max Erase Count",
+                "166": "Min Erase Count",
+                "167": "Average Erase Count",
+                "168": "Max Erase Count of Spec",
+                "169": "Remaining Lifetime Perc",
+                "178": "Runtime Invalid Blk Cnt",
+                "225": "Host Writes 32MiB",
+                "231": "SSD Life Left",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "245": "TLC Writes 32MiB",
+                "246": "SLC Writes 32MiB",
+                "247": "Raid Recoverty Ct",
+                "248": "Unkn SiliconMotion Attr",
+                "249": "Unkn SiliconMotion Attr",
+                "251": "Unkn SiliconMotion Attr"
+            },
+            "life_id": "169"
+        },
+        {
+            "regex": "SuperMicro SSD",
+            "attributes": {
+                "1": "Raw Read Error Rate",
+                "15": "User Cpcty Sector Cnt",
+                "160": "Not In Use",
+                "161": "Not In Use",
+                "163": "Not In Use",
+                "164": "Not In Use",
+                "165": "Not In Use",
+                "166": "Minimum PE Cycles TLC",
+                "167": "Not In Use",
+                "168": "Maximum PE Cycles TLC",
+                "231": "SSD Life Left",
+                "233": "NAND Writes 1GiB",
+                "241": "Lifetime Writes GiB",
+                "242": "Lifetime Reads GiB"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "240GB|",
+            "attributes": {
+                "148": "Total SLC Erase Ct",
+                "149": "Max SLC Erase Ct",
+                "150": "Min SLC Erase Ct",
+                "151": "Average SLC Erase Ct",
+                "159": "Unkn SiliconMotion Attr",
+                "160": "Uncorrectable Error Cnt",
+                "161": "Valid Spare Block Cnt",
+                "163": "Initial Bad Block Count",
+                "164": "Total Erase Count",
+                "165": "Max Erase Count",
+                "166": "Min Erase Count",
+                "167": "Average Erase Count",
+                "168": "Max Erase Count of Spec",
+                "169": "Remaining Lifetime Perc",
+                "178": "Runtime Invalid Blk Cnt",
+                "225": "Host Writes 32MiB",
+                "241": "Host Writes 32MiB",
+                "242": "Host Reads 32MiB",
+                "245": "TLC Writes 32MiB",
+                "246": "SLC Writes 32MiB",
+                "247": "Raid Recoverty Ct",
+                "248": "Unkn SiliconMotion Attr",
+                "251": "Unkn SiliconMotion Attr"
+            },
+            "life_id": "169"
+        },
+        {
+            "regex": "SH9MST6D[0-9]*GJSI?[0-9]*",
+            "attributes": {
+                "1": "Uncorrectable ECC Cnt",
+                "9": "Power On Hours",
+                "14": "Device Capacity LBAs",
+                "15": "User Capacity LBAs",
+                "16": "Init Spare Blocks Avail",
+                "17": "Spare Blocks Remaining",
+                "100": "Total Erase Count",
+                "168": "SATA PHY Err Ct",
+                "170": "Initial Bad Block Count",
+                "172": "Erase Fail Count",
+                "173": "Max Erase Count",
+                "174": "Unexpect Power Loss Ct",
+                "175": "Average Erase Count",
+                "197": "Not In Use",
+                "198": "Not In Use",
+                "199": "SATA CRC Error Count",
+                "202": "Perc Rated Life Used",
+                "231": "Perc Rated Life Remain",
+                "232": "Read Fail Count",
+                "234": "Flash Reads LBAs",
+                "235": "Flash Writes LBAs"
+            }
+        },
+        {
+            "regex": "SMART A25FD-(32|64|128)GI32N",
+            "attributes": {
+                "1": "Not Supported",
+                "2": "Not Supported",
+                "191": "Not Supported",
+                "197": "ECC Error Count",
+                "251": "Min Spares Remain Perc",
+                "252": "Added Bad Flash Blk Ct",
+                "254": "Total Erase Blocks Ct"
+            }
+        },
+        {
+            "regex": "(SMART|Adtron) ([AIS]25FBS|S35FCS).*",
+            "attributes": {
+                "9": "Power On Hours",
+                "194": "Proprietary 194"
+            }
+        },
+        {
+            "regex": "(SMART|Adtron) (A|I)25FBX.*",
+            "attributes": {
+                "9": "Proprietary 9",
+                "194": "Proprietary 194"
+            }
+        },
+        {
+            "regex": "(SMART|Adtron) A25FB.*2.N",
+            "attributes": {
+                "110": "Proprietary HWC",
+                "111": "Proprietary MP",
+                "112": "Proprietary RtR",
+                "113": "Proprietary RR",
+                "120": "Proprietary HFAll",
+                "121": "Proprietary HF1st",
+                "122": "Proprietary HF2nd",
+                "123": "Proprietary HF3rd",
+                "125": "Proprietary SFAll",
+                "126": "Proprietary SF1st",
+                "127": "Proprietary SF2nd",
+                "128": "Proprietary SF3rd"
+            }
+        },
+        {
+            "regex": "(SMART|Adtron) A25FB-.*3.N",
+            "attributes": {
+                "9": "Power On Hours",
+                "113": "Proprietary RR"
+            }
+        },
+        {
+            "regex": "(SSSTC|SATA) ER[2-9]-[CG]D(240|480|960|1920|3840|7680|15360)A?|",
+            "attributes": {
+                "100": "Max Min EC Count",
+                "170": "Available Reservd Space",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Average PE Count",
+                "174": "Unexpect Power Loss Ct",
+                "175": "PLP Failure",
+                "180": "Over",
+                "181": "Sys Percent Life Remain",
+                "182": "Heavy GC Log",
+                "183": "SATA Iface Downshift",
+                "189": "Maximum Erase Count",
+                "191": "Mininum Erase Count",
+                "202": "Percent Lifetime Remain",
+                "210": "Raid Success Recover Ct",
+                "229": "PLP Failure",
+                "231": "Percent Lifetime Remain",
+                "233": "Percent Lifetime Remain",
+                "234": "Thermal Throttle Status",
+                "243": "Total NAND Written",
+                "244": "SoC Data Path Prot Det",
+                "245": "Thermal Sensor Health",
+                "246": "Heavy Read Retry count",
+                "247": "NOR Health",
+                "248": "Cross Temp Duration",
+                "249": "SSD Health"
+            },
+            "life_id": "202"
+        },
+        {
+            "regex": "STEC M2P CF 1.0.0",
+            "attributes": {
+                "100": "Erase Program Cycles",
+                "103": "Remaining Energy Storg",
+                "170": "Reserved Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Wear Leveling Count",
+                "174": "Unexpect Power Loss Ct"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "(CFAST|M2[AC]A|MSATA|SSD)[0-9]{3}[GT]XA[CEI][MT][MST]-[0-9]{3}[TZ]",
+            "attributes": {
+                "168": "SATA Phy Error Count",
+                "169": "Bad Block Rate",
+                "192": "Unexpect Power Loss Ct",
+                "218": "SATA CRC Error Count",
+                "231": "Percent Lifetime Remain",
+                "241": "Host Writes GiB"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "FUJITSU MHY2(04|06|08|10|12|16|20|25)0BH.*",
+            "attributes": {
+                "240": "Transfer Error Rate"
+            }
+        },
+        {
+            "regex": "SK ?hynix (SC(210|300|308|311|313|401)|SH920) .*|",
+            "attributes": {
+                "5": "Retired Block Count",
+                "100": "Total Erase Count",
+                "168": "Min Erase Count",
+                "169": "Max Erase Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Wear Leveling Count",
+                "174": "Unexpect Power Loss Ct",
+                "176": "Unused Rsvd Blk Cnt Tot",
+                "180": "Erase Fail Count",
+                "181": "Non4k Aligned Access",
+                "183": "SATA Downshift Count",
+                "201": "Percent Lifetime Remain",
+                "212": "Phy Error Count",
+                "231": "SSD Life Left",
+                "241": "Total Writes GB",
+                "242": "Total Reads GB",
+                "243": "Total Media Writes",
+                "249": "NAND Writes GiB",
+                "250": "Read Retry Count"
+            },
+            "life_id": "173"
+        },
+        {
+            "regex": "HFS(480|960|1T9|3T8)G3[2E]FEH-[7B][4A]10A|",
+            "attributes": {
+                "5": "Retired Block Count",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Max Erase Count",
+                "174": "Unexpected Pwr Loss Cnt",
+                "175": "Program Fail Count",
+                "176": "Erase Fail Count",
+                "177": "Endurance Limit Met",
+                "178": "Used Rsrvd Blk Cnt Wrst",
+                "179": "Used Rsrvd Blk Cnt Tot",
+                "180": "E2E Error Det Corr Rate",
+                "181": "Program Fail Count",
+                "182": "Erase Fail Count",
+                "183": "SATA Downshift Count",
+                "195": "ECC on the Fly Rate",
+                "201": "Uncorr Soft Read Err Rt",
+                "202": "Exception Mode Status",
+                "204": "Soft ECC Correction Rt",
+                "231": "SSD Life Left",
+                "234": "Lifetime NAND Prg GiB",
+                "235": "Lifetime Writes GiB",
+                "241": "Lifetime NAND Prg GiB",
+                "242": "Lifetime Reads GiB",
+                "245": "SSD Life Left",
+                "250": "Read Retry Count"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "(Hitachi|HGST) HUS722T[12]TALA604",
+            "attributes": {
+                "16": "Gas Gauge"
+            }
+        },
+        {
+            "regex": "(WDC  ?)?WUH722020[AB]L[EN]6[0L][014]",
+            "attributes": {
+                "82": "Head Health Score",
+                "90": "NAND Master"
+            }
+        },
+        {
+            "regex": "(WDC  ?)?WUH722222[AB]L[EN]6[0L]4",
+            "attributes": {
+                "71": "Milli Micro Actuator",
+                "82": "Head Health Score",
+                "90": "NAND Master"
+            }
+        },
+        {
+            "regex": "(WDC  ?)?WSH722222[AB]L[EN]6[0L]4",
+            "attributes": {
+                "71": "Milli Micro Actuator",
+                "82": "Head Health Score",
+                "90": "NAND Master"
+            }
+        },
+        {
+            "regex": "(TOSHIBA )?MG09ACA1[02468]T[AE]Y?( .*LEN)?",
+            "attributes": {
+                "27": "MAMR Health Monitor"
+            }
+        },
+        {
+            "regex": "TOSHIBA MG10ACA20T[AE]Y?",
+            "attributes": {
+                "27": "MAMR Health Monitor"
+            }
+        },
+        {
+            "regex": "TOSHIBA MG10ADA([12468]00|10T)[EN]",
+            "attributes": {
+                "27": "MAMR Health Monitor"
+            }
+        },
+        {
+            "regex": "TOSHIBA MG10AFA22T[AE]Y?",
+            "attributes": {
+                "27": "MAMR Health Monitor"
+            }
+        },
+        {
+            "regex": "TOSHIBA MG11AC[AP](1[468]|2[024])TEY?",
+            "attributes": {
+                "27": "MAMR Health Monitor"
+            }
+        },
+        {
+            "regex": "TOSHIBA HDW([GNQ]1[468]0|G(440|480|11A|21[CE]|31[EG]|51[EJ]))|",
+            "attributes": {
+                "27": "MAMR Health Monitor"
+            }
+        },
+        {
+            "regex": "TOSHIBA THNSN8(120P|240P|480P|960P|1Q92)CSE",
+            "attributes": {
+                "167": "SSD Protect Mode",
+                "168": "SATA PHY Error Count",
+                "169": "Bad Block Count",
+                "173": "Erase Count"
+            }
+        },
+        {
+            "regex": "TOSHIBA THNS[NF]J(060|128|256|512)G[BCAM8VD][SCN][TU].*",
+            "attributes": {
+                "167": "SSD Protect Mode",
+                "168": "SATA PHY Error Count",
+                "169": "Bad Block Count",
+                "173": "Erase Count"
+            }
+        },
+        {
+            "regex": "ST(500DM009|1000DM010|2000DM00[67]|3000DM00[89]|4000DM006|6000DM004|8000DM005|10000DM0004|12000DM0007)-.*",
+            "attributes": {
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST(2000DM00[589]|3000DM007|4000DM00[45]|6000DM003|8000DM004)-.*",
+            "attributes": {
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST(5000LM000|[34]000LM024|2000LM015|1000LM048|500LM030)-.*",
+            "attributes": {
+                "183": "SATA Downshift Count"
+            }
+        },
+        {
+            "regex": "ST([1234568]|10)000NM0[012][0-68][456]-.*",
+            "attributes": {
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST[123468]000NM0(0[01234689]|1[0236]|2[1256])A-.*|",
+            "attributes": {
+                "18": "Head Health"
+            }
+        },
+        {
+            "regex": "ST12000NM00[01]7-.*",
+            "attributes": {
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST(14000NM04[24]8|14000NM0(01|25)8|12000NM0(00|24|53)8|10000NM0(47|56)8)-.*",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST1[0246]000NM00[13]G-.*",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST1(0000NM0(18|20)G|[2468]000NM00[012]J)-.*",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST(18|20)000NM00[0347]D-.*|",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST((12|16|20|24)000NM002H|24000NM000C)-.*",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST([123468]|1[0246])000VN00(0?[0234678]|1|22|33|41)-.*",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "ST([24]000NE0025|4000NE001|6000NE0023|8000NE00(04|08|21)|(1[02468]|2[02])000(NE|NT)(000[478]|001)|16000NE000)-.*",
+            "attributes": {
+                "18": "Head Health",
+                "200": "Pressure Limit"
+            }
+        },
+        {
+            "regex": "XF1230-1A(0240|0480|0960|1920)",
+            "attributes": {
+                "174": "Unexpect Power Loss Ct",
+                "180": "End to End Err Detect",
+                "183": "SATA Downshift Count",
+                "189": "SSD Health Flags",
+                "190": "SATA Error Ct",
+                "201": "Read Error Rate",
+                "231": "SSD Life Left Perc",
+                "234": "Lifetime Nand Gb",
+                "241": "Total Writes GiB",
+                "242": "Total Reads GiB",
+                "245": "Read Error Rate"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "ZA(240|480|960|1920|3840)NM10001",
+            "attributes": {
+                "100": "Flash GB Erased",
+                "102": "Lifetime PS4 Entry Ct",
+                "103": "Lifetime PS3 Exit Ct",
+                "170": "Grown Bad Block Ct",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Avg Program",
+                "174": "Unexpected Pwr Loss Ct",
+                "177": "Wear Range Delta",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable ECC Ct",
+                "198": "Uncor Read Error Ct",
+                "230": "Drv Life Protect Status",
+                "231": "SSD Life Left",
+                "233": "Lifetime Wts To Flsh GB",
+                "241": "Lifetime Wts Frm Hst GB",
+                "242": "Lifetime Rds Frm Hst GB",
+                "243": "Free Space"
+            },
+            "life_id": "102"
+        },
+        {
+            "regex": "Seagate IronWolf ZA(250|500|1000|2000|4000)NM10002-.*|",
+            "attributes": {
+                "16": "Spare Blocks Available",
+                "17": "Spare Blocks Remaining",
+                "168": "SATA PHY Error Count",
+                "170": "Early",
+                "173": "Max",
+                "174": "Unexpect Power Loss Ct",
+                "177": "Wear Range Delta",
+                "218": "SATA CRC Error Count",
+                "231": "SSD Life Left",
+                "232": "Read Failure Blk Ct",
+                "233": "Flash Writes GiB",
+                "234": "NAND Reads Sectors",
+                "235": "Flash Writes Sectors",
+                "241": "Host Writes GiB",
+                "242": "Host Reads GiB",
+                "246": "Write Protect Detail",
+                "247": "Health Check Timer"
+            },
+            "life_id": "231"
+        },
+        {
+            "regex": "XA(240|480|960|1920|3840)[LM]E10(00|02|04|06|08|10)3",
+            "attributes": {
+                "100": "Flash GB Erased",
+                "102": "Lifetime PS4 Entry Ct",
+                "103": "Lifetime PS3 Exit Ct",
+                "170": "Grown Bad Block Ct",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Avg Program",
+                "174": "Unexpected Pwr Loss Ct",
+                "177": "Wear Range Delta",
+                "183": "SATA Downshift Count",
+                "187": "Uncorrectable ECC Ct",
+                "198": "Uncor Read Error Ct",
+                "230": "Drv Life Protect Status",
+                "231": "SSD Life Left",
+                "233": "Lifetime Wts To Flsh GB",
+                "241": "Lifetime Wts Frm Hst GB",
+                "242": "Lifetime Rds Frm Hst GB",
+                "243": "Free Space"
+            },
+            "life_id": "102"
+        },
+        {
+            "regex": "WDC WDBNCE(250|500|00[124])0PNC(-.*)?|",
+            "attributes": {
+                "165": "Block Erase Count",
+                "166": "Minimum PE Cycles TLC",
+                "167": "Max Bad Blocks per Die",
+                "168": "Maximum PE Cycles TLC",
+                "169": "Total Bad Blocks",
+                "170": "Grown Bad Blocks",
+                "171": "Program Fail Count",
+                "172": "Erase Fail Count",
+                "173": "Average PE Cycles TLC",
+                "174": "Unexpected Power Loss",
+                "230": "Media Wearout Indicator",
+                "233": "NAND GB Written TLC",
+                "234": "NAND GB Written SLC",
+                "241": "Host Writes GiB",
+                "242": "Host Reads GiB",
+                "244": "Temp Throttle Status"
+            },
+            "life_id": "230"
+        },
+        {
+            "regex": "WDC WD((1004|2004)FBYZ|([234]000)FDYZ|[234]000FYYZ|2000FYYX)-.*",
+            "attributes": {
+                "16": "Total LBAs Read"
+            }
+        },
+        {
+            "regex": "WDC WD([2-68]00[123]FF[BSW]|1[02][12]KFB|(1[468]|20)[12]KFG)X-.*",
+            "attributes": {
+                "90": "NAND Master"
+            }
+        }
+    ]
+}

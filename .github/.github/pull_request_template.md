@@ -1,39 +1,56 @@
-## 🔀 Description
-Please provide a clear and concise description of what this pull request does.
-
-## 🧩 Type of Change
-Select the relevant option(s):
-
-- [ ] 🐞 Bug fix (non-breaking change that fixes an issue)
-- [ ] ✨ New feature (non-breaking change that adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to change)
-- [ ] 🧹 Code cleanup / refactoring
-- [ ] 📚 Documentation update
-- [ ] 🛠 Build / CI changes
-
-## 🧪 Testing
-Describe how this change was tested:
-
-- [ ] Tested locally
-- [ ] Added or updated tests
-- [ ] Not tested (please explain why)
-
-## 📎 Related Issues
-Link related issues using `Fixes #issue_number` or `Closes #issue_number`:
-
-- Fixes #
-
-## 📸 Screenshots (if applicable)
-Add screenshots or recordings to help explain your changes.
-
-## ⚠️ Notes for Reviewers
-Anything reviewers should be aware of?
-(e.g. limitations, edge cases, follow-up work)
+## Description
+Provide a clear and concise description of the changes introduced in this pull request.
 
 ---
 
-### ✅ Checklist
-- [ ] My code follows the project's style guidelines
-- [ ] I have tested my changes
-- [ ] I have updated documentation where necessary
-- [ ] My changes do not introduce new warnings or errors
+## Type of Change
+Select the relevant option(s):
+
+- [ ] Bug fix (non-breaking change that resolves an issue)
+- [ ] New feature (non-breaking change that adds functionality)
+- [ ] Breaking change (a change that may affect existing functionality)
+- [ ] Code cleanup or refactoring
+- [ ] Documentation update
+- [ ] Build or CI configuration changes
+
+---
+
+## Testing
+Describe how this change has been tested:
+
+- [ ] Tested locally
+- [ ] Added or updated automated tests
+- [ ] Not tested (please provide an explanation)
+
+Provide additional details about the testing process if necessary.
+
+---
+
+## Related Issues
+Reference related issues using the appropriate keywords:
+
+- Fixes #
+- Closes #
+
+---
+
+## Screenshots (if applicable)
+Include screenshots or recordings that help demonstrate the changes.
+
+---
+
+## Notes for Reviewers
+Provide any additional information reviewers should be aware of, such as:
+
+- Known limitations
+- Edge cases
+- Areas requiring special attention
+- Planned follow-up work
+
+---
+
+## Checklist
+- [ ] The code follows the project's style guidelines
+- [ ] Changes have been properly tested
+- [ ] Documentation has been updated where necessary
+- [ ] No new warnings or errors have been introduced
