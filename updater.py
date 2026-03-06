@@ -66,7 +66,7 @@ def _perform_auto_update(app_instance, download_url):
     
     def downloader():
         try:
-            zip_path = "update.zip"
+            zip_path = "DiskWiper.zip"
             urllib.request.urlretrieve(download_url, zip_path)
             
             app_instance.log("[OK] Download complete. Restarting to apply update...", "success")
